@@ -1,11 +1,15 @@
-/* Basic style */
+/* Basic Style */
 
 body {
   background: #fff;
   color: #333;
   font-family: Lato, sans-serif;
   background: #B2FEFA;
-
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #0ED2F7, #B2FEFA);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #0ED2F7, #B2FEFA);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #title {
@@ -42,7 +46,7 @@ button {
 }
 
 button {
-  background: #008CBA;
+  background-color: #008CBA;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -61,10 +65,11 @@ button:hover {
   cursor: pointer;
 }
 
-/*Heading*/
+
+/* Heading */
 
 h3,
-label[for='new-task']{
+label[for='new-task'] {
   color: #333;
   font-weight: 700;
   font-size: 15px;
@@ -74,7 +79,7 @@ label[for='new-task']{
   text-transform: uppercase;
 }
 
-input[type='text']{
+input[type="text"] {
   margin: 0;
   font-size: 18px;
   line-height: 18px;
@@ -87,13 +92,14 @@ input[type='text']{
   color: #888;
 }
 
-input[type='text']:focus{
+input[type="text"]:focus {
   color: #333;
 }
 
-/*New task*/
 
-label[for='new-task']{
+/* New Task */
+
+label[for='new-task'] {
   display: block;
   margin: 0 0 20px;
 }
@@ -103,7 +109,8 @@ input#new-task {
   width: 318px;
 }
 
-/*Task list */
+
+/* Task list */
 
 li {
   overflow: hidden;
@@ -111,7 +118,7 @@ li {
   border-bottom: 1px solid #eee;
 }
 
-li>input[type="checkbox"]{
+li>input[type="checkbox"] {
   margin: 0 10px;
   position: relative;
   top: 15px;
@@ -124,13 +131,14 @@ li>label {
   padding: 0 0 0 11px;
 }
 
-li>input[type="text"]{
+li>input[type="text"] {
   width: 226px;
 }
 
 li>.delete:hover {
   color: #CF2323;
 }
+
 
 /* Completed */
 
@@ -139,13 +147,14 @@ li>.delete:hover {
   color: #888;
 }
 
-/*edit task */
 
-ul li input[type="text"]{
+/* Edit Task */
+
+ul li input[type=text] {
   display: none;
 }
 
-ul li.editMode input [type="text"]{
+ul li.editMode input[type=text] {
   display: block;
 }
 
