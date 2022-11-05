@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>To Do List</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <script src="scripts/main.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="section1">
+      <p>
+        <label for="new-task">Add Task</label>
+        <input id="new-task" type="task">
+        <button>Add</button>
+      </p>
+    </div>
+    <div class="section2">
+      <h3>To-do</h3>
+      <ul id="incomplete-tasks">
+
+      </ul>
+    </div>
+    <div class="section3">
+      <h3>Completed Tasks</h3>
+      <ul id="completed-tasks">
+        <li>
+          <input type="checkbox" checked="">
+          <label>Learn Javascript</label>
+          <input type="text">
+          <button class="edit">Edit</button>
+          <button class="delete">Delete</button>
+        </li>
+      </ul>
+    </div>
+    <div class="section4">
+      <button id="clear">
+        <p>Clear</p>
+      </button>
+    </div>
+  </div>
+  
+</body>
+</html>
