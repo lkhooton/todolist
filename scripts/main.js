@@ -94,3 +94,10 @@ let editTask = (e) => {
 
   deleteTask(e);//runs the delete function to remove the selected data
 };
+
+//Get data from local storage
+(() => {
+  data = JSON.parse(localStorage.getItem("data")) || [];
+  console.log(data);
+  createTasks();
+})();
