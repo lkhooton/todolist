@@ -72,3 +72,25 @@ let resetForm = () => {
   dateInput.value = "";
   textarea.value = "";
 }
+
+//Delete to do item
+let deleteTask = (e) => {
+  e.parentElement.parentElement.remove();//delete html element from screen
+
+  data.splice(e.parentElement.parentElement.id, 1);//remove task from data array
+
+  localStorage.setItem.apply("data", JSON.stringify(data));//update local storage with new data
+
+  console.log(data);
+};
+
+//Edit to do item
+let editTask = (e) => {
+  let selectedTask = e.parentElement.parentElement;//target item to be edited
+
+  textInput.value = selectedTask.children[0].innerHTML;//these target values I want to edit
+  dateInput.value = selectedTask.children[1].innerHTML;
+  textarea.value = selectedTask.children[2].innerHTML;
+
+  deleteTask(e);//runs the delete function to remove the selected data
+};
